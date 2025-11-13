@@ -47,7 +47,7 @@ def caesar_encrypted_decrypted(item:dict):
 
 
 @app.get("/fence/encrypt")
-def dfgfg(text: str):
+def encrypted_fence(text: str):
     text = text.replace(" ","")
     Even = ""
     Odd = ""
@@ -57,3 +57,7 @@ def dfgfg(text: str):
         else:
             Odd = Odd +ch
     return {"encrypted_text": Even + Odd }
+
+
+@app.post("/fence/decrypt")
+def 
