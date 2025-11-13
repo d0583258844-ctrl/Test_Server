@@ -31,12 +31,11 @@ def caesar_encrypted_decrypted(item:dict):
         for ch in text1:
             ch1 = alph_list.index(ch)
             new_word += alph_list[(ch1 + item["offset"]) % 26] 
-        return new_word
+        return  {"encrypted_text": new_word } 
 
     elif item["mode"] == "decrypt":
         for ch in text1:
             ch1 = alph_list.index(ch)
             new_word += alph_list[(ch1 - item["offset"]) % 26] 
-    return new_word
-
+    return  {"decrypted_text": new_word}
 
